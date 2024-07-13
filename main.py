@@ -10,10 +10,10 @@ from data_to_xml import loadxml, outXml
 def dataColl():  # funcao para colheita de dados (a ser alterado)
 
     # verificar numero de resultados do link (a ser removido, falta teste de conexao)
-    baseurl = 'http://www.base.gov.pt/Base/pt/ResultadosPesquisa?type=contratos&query=atedatapublicacao%3D2020-07-08'
+    baseurl = 'http://www.base.gov.pt/Base4/pt/pesquisa?type=contratos&query=atedatapublicacao%3D2020-07-08'
     check = requests.get(baseurl)
     num = BeautifulSoup(check.text, 'lxml')
-    checkempty = num.find('span', {"class": "defaultColor strong"})
+    checkempty = num.find('div', {"id": "total"})
 
     # verificar erros de formato do input e dos resultados do link (a ser removido)
     if int(checkempty.text) == 0:

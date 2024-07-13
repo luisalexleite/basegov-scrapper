@@ -1,5 +1,7 @@
 pylint==2.6.0
 beautifulsoup4==4.9.3
 PyQt5==5.15.1
-PySide2==5.15.1
+PySide2==5.13.2
 lxml==4.9.1
+requests==2.32.3
+numpy==2.0.0
